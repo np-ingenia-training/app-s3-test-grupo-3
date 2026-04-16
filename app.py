@@ -6,10 +6,10 @@ import io
 
 app = Flask(__name__, static_folder="static")
 
-BUCKET_NAME = os.environ.get("S3_BUCKET_V2_BUCKET_NAME", "")
-BUCKET_REGION = os.environ.get("S3_BUCKET_V2_BUCKET_REGION", "us-east-1")
-AWS_ACCESS_KEY_ID = os.environ.get("S3_BUCKET_V2_ACCESS_KEY_ID", "")
-AWS_SECRET_ACCESS_KEY = os.environ.get("S3_BUCKET_V2_SECRET_ACCESS_KEY", "")
+BUCKET_NAME = os.environ.get("S3_GRUPO_3_BUCKET_NAME", "")
+BUCKET_REGION = os.environ.get("S3_GRUPO_3_REGION", "us-east-1")
+AWS_ACCESS_KEY_ID = os.environ.get("S3_GRUPO_3_ACCESS_KEY_ID", "")
+AWS_SECRET_ACCESS_KEY = os.environ.get("S3_GRUPO_3_SECRET_ACCESS_KEY", "")
 
 
 def get_s3_client():
@@ -31,7 +31,7 @@ def health():
         "status": "ok",
         "bucket_name": BUCKET_NAME,
         "bucket_region": BUCKET_REGION,
-        "bucket_arn": os.environ.get("S3_BUCKET_V2_BUCKET_ARN", ""),
+        "bucket_arn": os.environ.get("S3_GRUPO_3_BUCKET_ARN", ""),
         "connected": BUCKET_NAME != "",
     })
 
